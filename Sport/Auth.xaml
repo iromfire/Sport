@@ -11,6 +11,7 @@
             <RowDefinition Height="1.5*"></RowDefinition>
             <RowDefinition Height="1.5*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -24,8 +25,8 @@
         <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">Пароль</TextBlock>
         <TextBox x:Name="Password" Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="200" Height="70"></TextBox>
 
-        <Button x:Name="AuthSubmit" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="AuthSubmit_Click">Войти</Button>
-
-        <StackPanel x:Name="stackPanel" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Stretch"></StackPanel>
+        <Button x:Name="AuthSubmit" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Click="AuthSubmit_Click">Войти</Button>
+        <Button x:Name="GuestSubl" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Click="GuestSubl_Click">Войти как гость</Button>
+        <StackPanel x:Name="stackPanel" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Stretch"></StackPanel>
     </Grid>
 </Window>

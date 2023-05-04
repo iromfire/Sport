@@ -1,25 +1,24 @@
-﻿<Window x:Class="Sport.MainWindow"
+﻿<Window x:Class="Sport.GuestWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sport"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="900" x:Name="window">
+        Title="GuestWindow" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
+          <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="8*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="{Binding Path=Name, ElementName=window}" Foreground="White" HorizontalAlignment="Stretch" Padding="10" Background="#0ce85c"></TextBlock>
+        <TextBlock Grid.Row="0" Text="Вы вошли как гость" Foreground="White" HorizontalAlignment="Stretch" Padding="10" Background="#0ce85c"></TextBlock>
         <TextBlock Grid.Row="1" Padding="10" Background="#0ce85c" Foreground="White">Список товаров</TextBlock>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <Button  Click="Button_Click" Width="200">По возрастанию цены</Button>
             <Button  Click="Button_Click1" Width="200">По убыванию цены</Button>
         </StackPanel>
-      
         <DataGrid Grid.Row="3" x:Name="dataGrid"></DataGrid>
     </Grid>
 </Window>

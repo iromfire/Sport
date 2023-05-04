@@ -10,22 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Sport
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для GuestWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GuestWindow : Window
+        
     {
         SportDbContext sportDb = new SportDbContext();
-        public MainWindow(string name)
+        public GuestWindow()
         {
             InitializeComponent();
             dataGrid.ItemsSource = sportDb.Products.ToList();
-            Name = name;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

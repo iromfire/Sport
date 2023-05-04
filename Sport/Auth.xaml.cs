@@ -93,5 +93,11 @@ namespace Sport
                 }
             }
         }
+
+        private void GuestSubl_Click(object sender, RoutedEventArgs e)
+        {
+            new GuestWindow().Show();
+            Close();
+        }
     }
 }

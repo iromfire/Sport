@@ -1,0 +1,69 @@
+﻿<Window x:Class="Sport.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sport"
+        mc:Ignorable="d"
+        Title="AddProduct" Height="500" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>            
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Артикул</Label>
+        <TextBox x:Name="textBoxArticul" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"></TextBox>
+
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Наименование</Label>
+        <TextBox x:Name="textBoxName" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"></TextBox>
+
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Категория</Label>
+        <ComboBox x:Name="comboBoxCategory" DisplayMemberPath="ProductCategoryName" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"></ComboBox>
+
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Количество на складе</Label>
+        <TextBox x:Name="textBoxQuantityStock"  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"></TextBox>
+
+        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Единица измерения</Label>
+        <ComboBox x:Name="comboBoxUnitType" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" DisplayMemberPath="UnitTypeName"></ComboBox>
+
+
+        
+        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Поставщик</Label>
+        <ComboBox x:Name="comboboxBoxManufacturer" DisplayMemberPath="ProductManufacturerName" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"></ComboBox>
+
+        <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Размер максимальной скидки</Label>
+        <ComboBox x:Name="comboBoxMaxDiscountAmount" DisplayMemberPath="ProductMaxDiscountAmount" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"></ComboBox>        
+        
+        <Label Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Размер действующей скидки</Label>
+        <TextBox x:Name="textBoxProductDisountAmount" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"></TextBox>
+
+        <Label Grid.Row="8" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Стоимость за единицу</Label>
+        <TextBox x:Name="textBoxCost" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"></TextBox>
+
+        <Label Grid.Row="9" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Изображение</Label>
+        <Button Grid.Row="9" Grid.Column="1"  Click="SelectImage" Content="Выбрать изображение" VerticalAlignment="Center" Width="200"></Button>
+        
+
+        <Label Grid.Row="10" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Подробное описание</Label>
+        <TextBox  x:Name="textBoxDescription" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"  Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"></TextBox>
+
+        <Button Grid.Row="11" Grid.Column="1" Click="Button_Click">Добавить товар</Button>
+        <Button Grid.Row="11" Grid.Column="0" Click="Button_Click_1" >Назад</Button>
+    </Grid>
+</Window>
